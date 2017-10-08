@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function fn(){
+        return function (){
+            return function (){
+                alert(123);
+            }
+        };
+    }
+    var result = fn();//function (){return function (){alert(123);}};
+     var result2 = result();//function (){alert(123);}
+     result2();//alert(123)
+    fn()()();
+
+</script>
+</html>

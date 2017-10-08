@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function eat (aa) {
+        //console.log(aa);//function () {console.log('去唱歌')}
+        setTimeout(function () {
+            console.log('吃完了');
+            aa()
+        }, 1000)
+    }
+    eat(function () {
+        console.log('去唱歌')
+    })
+
+
+    function fn(a){
+        setTimeout(function(){
+            console.log("hello");
+            a();
+        },1000)
+    }
+    fn(function(){
+        console.log(123)
+    });
+</script>
+</html>

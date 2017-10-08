@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function bank(money){
+        return function (RMB) {
+            if(money+RMB < 0 ){
+                money = -RMB;
+                alert("对不起，您的余额不足"+money+"元");
+            }else {
+                money = money + RMB;
+                alert("您的余额为："+money+ "元")
+            }
+        }
+    }
+    var ATM =bank(10000);
+    ATM(+50000);
+    ATM(-80000);
+    ATM(+90000);
+    ATM(-80000);
+</script>
+</html>

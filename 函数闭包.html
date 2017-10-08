@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function fn(num2){
+        var num = 15;
+        function abc(){
+            num++;
+            console.log(num+num2);
+        }
+        return abc;
+    }
+    var aa = fn(20);// 15
+    aa();//15+1 +20
+    aa();//16+1 +20
+    aa();//17+1 +20
+    //闭包：fn函数内部定义了一个abc函数，abc函数就是一个闭包。
+    //这个闭包可以引用外部函数或者参数，是变量或者参数常驻内存
+    //避免被垃圾回收机制回收。
+
+</script>
+</html>

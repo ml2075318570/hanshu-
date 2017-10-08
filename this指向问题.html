@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+//    function fn(){
+//        console.log(this);
+//        //this在函数定义的售后部确定，只有在函数调用时才确定。
+//        //当前函数被谁调用，this就指向谁
+//    }
+    //fn();//如果把它当成普通函数来看，this指向 widow
+    //var fn1 = new fn();//如果把它看成构造函数，当前函数是被new富哦调用
+    //this是一个初始化的模型，是一个隐式对象
+    //当new调用完成这个构造函数之后，this是一个实例化的一个对象
+//    var obj = {
+//        fn: function () {
+//            console.log(this);
+//        }
+//    };
+//    obj.fn();//相当于一个对象在调用一个方法。
+//    document.onclick = function () {
+//        console.log(this);
+//    }
+    //事件调用函数，函数里面的this指向当前触发该事件前面的那个元素。
+    var timer = window.setInterval(function () {
+        console.log(this);
+    },500);
+    //定时器里面的this指向window。
+</script>
+</html>

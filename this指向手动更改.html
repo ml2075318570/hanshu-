@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function fn(a,b,c){
+        console.log(a+b+c);
+        console.log(this);
+    }
+    //fn(1,2,3);//this指向window
+    //fn.call(document,1,2,3);//this指向 document
+    //call 方法可以传入参数 第一个参数；需要更改的this指向
+    //从第二个参数起，后面收拾实际传入参数
+    //如果第一个参数为null或者undefined 默认函数内部this指向window
+
+    //fn.apply(document,[3,2,1]);
+    //第一个参数；用来更改this指向
+    //第二个参数； 数组，里面放多个实参
+
+//    var newfn = fn.bind(document);//函数是不执行的，只是用来更改内部this指向
+//    newfn(3,4,5);
+//     fn.bind(document,3,4,5)();//在函数执行之后，先用bind更改，然后立即执行
+//    fn.bind(document,3)(4,5);
+</script>
+</html>
